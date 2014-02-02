@@ -1,10 +1,13 @@
-"use strict"; // Use ECMAScript 5 strict mode in browsers that support it
+"use strict"; /* Use ECMAScript 5 strict mode in browsers that support it*/
+
+var EXPORTED_SYMBOLS = ["calculate"];
+
 function calculate() {
   var result;
   var original = document.getElementById("original");
   var temp = original.value;
   var regexp = /^(?:\+|-)?\d+(\.)?\d+[cCfF]$/;
-  
+
   var m = temp.match(regexp);
   
   if (m) {

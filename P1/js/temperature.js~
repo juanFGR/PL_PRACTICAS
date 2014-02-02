@@ -26,5 +26,4 @@ function calculate() {
   else {
     converted.innerHTML = "<div class='alert alert-error'><span class='label label-important'>Error</span> Try something like -4.2C instead</div>";
   }
-  return result;
 }

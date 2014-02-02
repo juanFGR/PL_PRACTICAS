@@ -12,7 +12,7 @@
   <header>
   <div style="width:100%;text-align:left;"><a href="./tests/index.html" class="btn btn-primary">Run test</a></div>
 	<div style="text-align:center">
-		<h1>Temperature Converter</h1>
+		<h1 id="title">Temperature Converter</h1>
 	</div>
   </header>
   
