@@ -1,4 +1,4 @@
-/*var assert = chai.assert,
+var assert = chai.assert,
     expect = chai.expect,
     should = chai.should(); // Note that should has to be executed
 
@@ -7,45 +7,34 @@ var foobar = {
   titleApp: function() {
   		
   //	alert($("#original").val());
-    return $("#a").html();
+    return "Comma Separated Value Analyzer";
   },
     placeHolder: function() {
-    return calculate();
+
+    if(localStorage){
+        return "true";
+    }else{
+        return "false";
+    }
+
   }
   
 };
 
-describe('Testo', function() {
+describe('Texto', function() {
 	before(function() {
    $("#original").val("25C");
   });
   
   describe('#AppValues()', function() {
     it('title value-> should work with assert', function() {
-      assert.equal(foobar.titleApp(), 'table');
+      assert.equal(foobar.titleApp(), 'Comma Separated Value Analyzer');
     })
 
-    it('title value-> should work with expect', function() {
-      expect(foobar.titleApp()).to.equal('table');
+    it('localstorage true-> should work with expect', function() {
+      expect(foobar.placeHolder()).to.equal('true');
     })
 
-    it('title value-> should work with should', function() {
-      foobar.titleApp().should.equal('Temperature Converter');
-    })
-    it('simulation-> should work with should', function() {
-   
-      foobar.placeHolder().should.equal('77F');
-    })
   });
   });
-  
-*/
-  $("#inputFile").click(function() {
-       $.ajax({
-           url : "input2.txt",
-           dataType: "text",
-           success : function (data) {
-               $("#original").text(data);
-           }
-       });
-   });
+ 

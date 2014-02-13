@@ -13,11 +13,7 @@
         <script type="text/javascript" src="mocha.js"></script>
      <script type="text/javascript" src="csv.js"></script>
   
-         
-        
-         <script type="text/javascript" src="tests.js"></script>   
-
- 
+    
  
   </head>
   <body>
@@ -35,21 +31,20 @@
       mocha.run();
     })
     
-      $(document).ready(function() {
-    $("#inputFile").click(function() {
-        $.ajax({
-            url : "input2.txt",
+  function  volcar() {
+	        $.ajax({
+            url : "./input2.txt",
             dataType: "text",
             success : function (data) {
                 $("#original").html(data);
             }
         });
-    });
-}); 
+}
+
 
   </script>     
   
-  
+       <script type="text/javascript" src="tests.js"></script>  
 
   <div id="header" class="header">
   <a type="button" class="btn btn-default">Volver</a>
@@ -69,7 +64,7 @@
    </div>
    <br />
     <button id ="a" class="btn btn-primary" type="button">Ejecutar Analizador</button><br>
-<button id ="inputFile" class="btn btn-primary" type="button">Volcar fichero</button><br>
+<button id ="inputFile" class="btn btn-primary" type="button" onclick="volcar();">Volcar fichero</button><br>
 
 </div>    
     
