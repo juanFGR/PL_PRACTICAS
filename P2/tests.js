@@ -23,7 +23,7 @@ var foobar = {
 
 describe('Texto', function() {
 	before(function() {
-   $("#original").val("25C");
+ //  $("#original").val("25C");
   });
   
   describe('#AppValues()', function() {

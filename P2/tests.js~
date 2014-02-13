@@ -12,9 +12,9 @@ var foobar = {
     placeHolder: function() {
 
     if(localStorage){
-        return true;
+        return "true";
     }else{
-        return false;
+        return "false";
     }
 
   }
@@ -31,8 +31,8 @@ describe('Texto', function() {
       assert.equal(foobar.titleApp(), 'Comma Separated Value Analyzer');
     })
 
-    it('title value-> should work with expect', function() {
-      expect(foobar.titleApp()).to.equal('table');
+    it('localstorage true-> should work with expect', function() {
+      expect(foobar.placeHolder()).to.equal('true');
     })
 
   });
