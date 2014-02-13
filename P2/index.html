@@ -2,28 +2,83 @@
   <head>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      <title>CSV Analyzer</title>
-     <link href="test/mocha.css" rel="stylesheet" type="text/css">
- 	<link href="global.css" rel="stylesheet" type="text/css">
+    
+    <link href="global.css" rel="stylesheet" type="text/css">
+ <link href="mocha.css" rel="stylesheet" type="text/css">
+ 	 <link href="../bootstrap.css" rel="stylesheet" type="text/css">
+
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="chai.js"></script>
+        <script type="text/javascript" src="mocha.js"></script>
      <script type="text/javascript" src="csv.js"></script>
-     
-          <script type="text/javascript" src="test/chai.js"></script>
-          <script type="text/javascript" src="test/mocha.js"></script>
-           <script type="text/javascript" src="test/test.js"></script>   
+  
+         
+        
+         <script type="text/javascript" src="tests.js"></script>   
+
+ 
+ 
   </head>
   <body>
-    <h1>Comma Separated Value Analyzer</h1>
+  
+  <script>mocha.setup('bdd')</script>
+ <script>
+    function assert(expr, msg) {
+      if (!expr) throw new Error(msg || 'failed');
+    }
+  </script>
+
+  <script>
+
+    $(function() {
+      mocha.run();
+    })
+    
+      $(document).ready(function() {
+    $("#inputFile").click(function() {
+        $.ajax({
+            url : "input2.txt",
+            dataType: "text",
+            success : function (data) {
+                $("#original").html(data);
+            }
+        });
+    });
+}); 
+
+  </script>     
+  
+  
+
+  <div id="header" class="header">
+  <a type="button" class="btn btn-default">Volver</a>
+   <a type="button" class="btn btn-success">Ejecutar Test</a>
+  </div>
+  
+    <h1 >Comma Separated Value Analyzer</h1>
+    
+    <div style ="text-align:center;">
     <div>
       <i>Write a CSV string. Click the table button. The program outputs a table with the specified data.</i>
     </div>
-    <table>
-      <tr>
-        <th>CSV string:</th> <!-- autofocus attribute is HTML5 -->
-        <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td> 
-      </tr>
-    </table>
-    <button type="button">table:</button><br>
+    <br />
+   
+   
+      <div style="width:70%;margin:auto;">  <textarea autofocus class="form-control" cols = "80" rows = "5" id="original"></textarea>
+   </div>
+   <br />
+    <button id ="a" class="btn btn-primary" type="button">Ejecutar Analizador</button><br>
+<button id ="inputFile" class="btn btn-primary" type="button">Volcar fichero</button><br>
+
+</div>    
+    
+    
+    
     <span class="output" id="finaltable"></span>
+          <div style="margin-top:50px" id="mocha"></div>
+  
+  <div id ="footer" class="footer"> Juan Francisco González Ramos</div>
   </body>
+
 </html>

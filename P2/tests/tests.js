@@ -7,13 +7,14 @@ var foobar = {
   titleApp: function() {
   		
   //	alert($("#original").val());
-    return $("#title").html();
+    return $("#a").html();
   },
     placeHolder: function() {
     return calculate();
   }
   
 };
+
 
 describe('Test realizado', function() {
 	before(function() {
@@ -22,11 +23,11 @@ describe('Test realizado', function() {
   
   describe('#AppValues()', function() {
     it('title value-> should work with assert', function() {
-      assert.equal(foobar.titleApp(), 'Temperature Converter');
+      assert.equal(foobar.titleApp(), 'table');
     })
 
     it('title value-> should work with expect', function() {
-      expect(foobar.titleApp()).to.equal('Temperature Converter');
+      expect(foobar.titleApp()).to.equal('table');
     })
 
     it('title value-> should work with should', function() {

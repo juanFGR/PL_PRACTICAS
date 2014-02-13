@@ -3,10 +3,9 @@ html *
    font-size: large; 
    /* The !important ensures that nothing can override what you've set in this style (unless it is also important). */
    font-family: Arial;
-   color:white;
 }
 
-h1            { text-align: center; font-size: x-large; color: white !important;}
+h1            { text-align: center; font-size: x-large; }
 th, td        { vertical-align: top; text-align: right; }  
  #finaltable  * { color: white; background-color: black; }   
 
@@ -16,19 +15,12 @@ th, td        { vertical-align: top; text-align: right; }
 tr:nth-child(odd)    { background-color:#eee; }
 tr:nth-child(even)    { background-color:#00FF66; }
 input        { text-align: right;  border: none;       }     /* Align input to the right  */
-textarea     {  border-color: white;       }                        
-table        {  border-color: white; }
+textarea     { border: outset; border-color: white;       }                        
+table        { border: inset; border-color: white; }
 table.center { margin-left:auto; margin-right:auto; }
 #result      { border-color: red; }
 tr.error       { background-color: red; }
 body
 {
- background: url('./back.jpg') #b0c4de;  /* blue */
- margin: 2px !important;
-}
-
-.footer{
- 	clear: both;
-    position: absolute;
-    bottom: 10px;
+ background-color:#b0c4de;  /* blue */
 }

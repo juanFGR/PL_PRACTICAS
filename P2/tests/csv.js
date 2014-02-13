@@ -5,7 +5,8 @@ $(document).ready(function() {
    $("button").click(function() {
      calculate();
    });
- });
+ });file:///home/juanfgr/Escritorio/PL_PRACTICAS/P2/input.txt
+file:///home/juanfgr/Escritorio/PL_PRACTICAS/P2/input2.txt
 
 
 function calculate() {
