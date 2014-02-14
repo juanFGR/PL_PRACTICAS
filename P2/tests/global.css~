@@ -8,7 +8,7 @@ html *
 
 h1            { text-align: center; font-size: x-large; color: white !important;}
 th, td        { vertical-align: top; text-align: right; }  
- #finaltable  * { color: black; }   
+ #finaltable  * { color: white; }   
 
  #finaltable table { border-collapse:collapse; } 
  #finaltable table, td { border:1px solid white; } 

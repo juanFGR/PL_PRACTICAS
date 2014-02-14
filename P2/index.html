@@ -5,7 +5,7 @@
     
     <link href="global.css" rel="stylesheet" type="text/css">
  <link href="mocha.css" rel="stylesheet" type="text/css">
- 	 <link href="../bootstrap.css" rel="stylesheet" type="text/css">
+	 <link href="./bootstrap.css" rel="stylesheet" type="text/css">
 
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -47,8 +47,11 @@
        <script type="text/javascript" src="tests.js"></script>  
 
   <div id="header" class="header">
-  <a href ="../index.html" target="_blank"type="button" class="btn btn-default">Volver</a>
-   <a type="button" class="btn btn-success">Ejecutar Test</a>
+  <a href ="../index.html" type="button" class="btn btn-default">Home</a>
+    <a href ="https://github.com/juanFGR/PL_PRACTICAS" target="_blank" type="button" class="btn btn-default">Repositorio</a>
+   <a type="button" class="btn btn-success"  href="./tests/index.html">Ejecutar Test</a>
+   
+   <div style="text-align:right;z-index:100;"> <a style="cursor:pointer;" href="http://es.wikipedia.org/wiki/CSV" target="_blank"><img width ="60" height="60" src="./csv.png" alt="csv icon" /></a></div>
   </div>
   
     <h1 >Comma Separated Value Analyzer</h1>
@@ -63,9 +66,10 @@
       <div style="width:70%;margin:auto;">  <textarea autofocus class="form-control" cols = "80" rows = "5" id="original"></textarea>
    </div>
    <br />
-    <button id ="a" class="btn btn-primary" type="button">Ejecutar Analizador</button><br>
-<button id ="inputFile" class="btn btn-primary" type="button" onclick="volcar();">Volcar fichero</button><br>
-
+  <div style="display:inline">
+	<button id ="inputFile" class="btn btn-primary" type="button" onclick="volcar();">Cargar ejemplo</button>
+  <button id ="a" class="btn btn-primary" type="button">Ejecutar Analizador</button>
+</div>
 </div>    
     
     

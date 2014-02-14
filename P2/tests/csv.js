@@ -2,11 +2,10 @@
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 
 $(document).ready(function() {
-   $("button").click(function() {
+   $("#a").click(function() {
      calculate();
    });
- });file:///home/juanfgr/Escritorio/PL_PRACTICAS/P2/input.txt
-file:///home/juanfgr/Escritorio/PL_PRACTICAS/P2/input2.txt
+ });
 
 
 function calculate() {

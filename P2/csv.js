@@ -49,7 +49,7 @@ function calculate() {
       r.push(tr+_.template(row, {items : result})+"</tr>");
     }
     else {
-      alert('ERROR! row '+temp+' does not look as legal CSV');
+   //   alert('ERROR! row '+temp+' does not look as legal CSV');
       error = true;
     }
   }
