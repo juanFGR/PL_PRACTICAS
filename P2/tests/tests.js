@@ -5,11 +5,9 @@ var assert = chai.assert,
 
 var foobar = {
   titleApp: function() {
-  		
-  //	alert($("#original").val());
     return "Comma Separated Value Analyzer";
   },
-    placeHolder: function() {
+    localStore: function() {
 
     if(localStorage){
         return "true";
@@ -17,23 +15,42 @@ var foobar = {
         return "false";
     }
 
+  },
+    existTextArea: function() {
+    	if($("textarea") != null)
+    	    return "true";
+    	else return "false";
+  },
+    exisButtonTest: function() {
+       	if($("textarea") != null)
+    	    return "true";
+    	else return "false";
   }
   
 };
 
 describe('Texto', function() {
 	before(function() {
- //  $("#original").val("25C");
   });
   
-  describe('#AppValues()', function() {
-    it('title value-> should work with assert', function() {
+  describe('#Banco de pruebas()', function() {
+  	
+    it('title value-> devuelve el titulo de la app', function() {
       assert.equal(foobar.titleApp(), 'Comma Separated Value Analyzer');
     })
 
-    it('localstorage true-> should work with expect', function() {
-      expect(foobar.placeHolder()).to.equal('true');
+    it('localstorage true-> devuelve true si es posible usar localstorage', function() {
+      expect(foobar.localStore()).to.equal('true');
     })
+    
+     it('existTextArea true-> devuelve true si es existe TextArea', function() {
+      expect(foobar.existTextArea()).to.equal('true');
+    })
+    
+     it('existButtons true-> devuelve true si todos los botones estan bien', function() {
+      expect(foobar.exisButtonTest()).to.equal('true');
+    })
+    
 
   });
   });
